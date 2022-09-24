@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block head %}
+Leitor RSS
+{% endblock %}
+
+{% block body %}
+<h1 style="text-align: center;">Leitor RSS</h1>
+
+<h5>Escolha um dos seguintes jornais:</h5>
+
+<div class="list-group">
+    <a href="/jn" class="list-group-item list-group-item-action">{{ jornais[0] }}</a>
+    <a href="/pplware" class="list-group-item list-group-item-action">{{ jornais[1] }}</a>
+</div>
+{% endblock %}

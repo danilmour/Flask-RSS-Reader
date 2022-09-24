@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block head %}
+RSS Feed
+{% endblock %}
+
+{% block body %}
+<h1 style="text-align: center;">{{ rss.feed.title }}</h1>
+<table class="table">
+    <tr style="text-align: center;">
+        <th>
+            Título
+        </th>
+        <th>
+            Conteúdo
+        </th>
+    </tr>
+    {% for entry in rss.entries %}
+    <tr>
+        <td>
+            <a href="{{ entry.link }}">{{ entry.title }}</a>
+        </td>
+        <td>
+            {{ entry.description }}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
